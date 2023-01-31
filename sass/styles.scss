@@ -1,0 +1,138 @@
+@use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+$headings: 'Poppins', sans-serif;
+$body: 'Open Sans', sans-serif;
+$violet: hsl(257, 40%, 49%); // background color, button text
+$dark-violet: hsl(257, 40%, 37%); // button shadow
+$soft-magenta: hsl(300, 69%, 71%); // active states
+$dark-magenta: hsl(320, 92%, 65%); // active states (socials)
+
+body {
+    background: {
+        color: $violet;
+        image: url(/images/bg-mobile.svg);
+        repeat: no-repeat;
+        size: 100%;
+    };
+}
+
+.hero__container {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logo {
+    margin: 20px 0px 50px;
+    max-width: 130px;
+}
+
+.hero {
+    text-align: center;
+
+    &__img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-family: $headings;
+    }
+    &__description {
+        margin: 20px 0 25px;
+        line-height: 1.5em;
+    }
+    &__button {
+        width: 75%;
+        border: none;
+        border-radius: 30px;
+        padding: 0.9em;
+        cursor: pointer;
+        color: $violet;
+        font-family: $headings;
+        box-shadow: 5px 5px 5px #4e3985;
+
+        &:hover {
+            background-color: $soft-magenta;
+            color: white;
+        }
+    }
+}
+
+.socials {
+    text-align: center;
+    margin-top: 60px;
+
+    &__social {
+        font-size: 0.938rem;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 8px;
+        margin: 0 5px;
+        cursor: pointer;
+    
+        &:hover {
+            color: $dark-magenta;
+            border-color: $dark-magenta;
+        }
+    }
+}
+
+.attribution {
+    font-size: 0.8rem; 
+    line-height: 2em;
+    text-align: center;
+    margin-top: 10px;
+
+    a { 
+        color: $soft-magenta; 
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background: {
+            image: url(/images/bg-desktop.svg);
+            size: cover;
+        };
+    }
+
+    .hero__container {
+        max-width: 1250px;
+        margin: 0 60px;
+        padding: 0;
+    }
+
+    .logo {
+        max-width: 150px;
+        margin: 40px 0 70px;
+    }
+
+    .hero {
+        display: flex;
+        text-align: left;
+
+        &__column {
+            margin: 40px 0 0 40px;
+        }
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__description {
+            font-size: 1.1rem;
+        }
+        &__button {
+            max-width: 220px;
+            font-size: 1.1rem;
+        }
+    }
+
+    .socials {
+        text-align: end;
+
+        &__social {
+            font-size: 1.25rem;
+        }
+    }
+}
