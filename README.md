@@ -36,8 +36,8 @@ Project preview
 
 ### Links
 
-- Solution URL: [Solution in Frontend Mentor]()
-- Live Site URL: [Vercel Deploy]()
+- Solution URL: [Solution in Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-huddle-landing-page-using-html-css-and-sass-hvXVZwd_-m)
+- Live Site URL: [Vercel Deploy](https://huddle-hero-section.vercel.app/)
 
 ## My process
 
